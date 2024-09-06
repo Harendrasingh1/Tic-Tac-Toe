@@ -1,0 +1,292 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    background-color: #979ed9;
+    text-align: center;
+    background-image: url('b.png'); /* Add your background image */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .container {
+    height: 49vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+  .game {
+    height: 60vmin;
+    width: 60vmin;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2vmin;
+  }
+  
+  .box {
+    height: 16vmin;
+    width: 16vmin;
+    border-radius: 1rem;
+    border: none;
+    box-shadow: 0 0 1rem rgba(32, 29, 29, 0.3);
+    font-size: 8vmin;
+    color: #b52222; /* Text color in box */
+    background-color: #4ca9da; /* Box color */
+    transition: transform 0.2s;
+  }
+  
+  .box:hover {
+    transform: scale(1.15);
+  }
+  
+  #reset-btn {
+    padding: 0.9rem;
+    font-size: 0.9rem; /* Larger font size */
+    background-color: #dd3c3c; /* Reset button background color */
+    color: #fff; /* Reset button text color */
+    border-radius: 1rem;
+    border: none;
+  }
+  
+  #new-btn {
+    padding: 1rem;
+    font-size: 1.5rem;
+    background-color: #5ea4db;
+    color: #0e0202;
+    border-radius: 1rem;
+    border: none;
+  }
+  
+  #msg {
+    color: #cb1e1e;
+    font-size: 5vmin;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .msg-container {
+    height: 80vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 4rem;
+  }
+  
+  .hide {
+    display: none;
+  }
+  
+  .setup-container {
+    margin-bottom: 2rem;
+  }
+  
+  .player-setup input {
+    font-size: 1rem;
+    padding: 0.8rem;
+    margin: 0.5rem;
+    border-radius: 0.5rem;
+    border: 2px solid #973a3a;
+    background-color: #181813;
+    color: #f4f0f0; /* Player names text color */
+  }
+  
+  .turn-setup button,
+  .turn-start button {
+    padding: 0.9rem;
+    font-size: 1.1rem; /* Larger font size */
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    border: 1px solid #933131;
+    border-radius: 0.5rem;
+    color: #f2f6f7;
+    background-color: #2d1a1a;
+    cursor: pointer;
+  }
+  
+  .turn-setup button.active {
+    background-color: #21c555;
+  }
+  
+  .turn-setup button:hover {
+    background-color: #3ab48b;
+  }
+  
+  .turn-start button {
+    background-color: #2e9de7;
+  }
+  
+  .turn-start button:focus {
+    outline: none;
+  }
+  
+
+  footer {
+    background-color: #50a0b9;
+    color: #c92626;
+    padding: 0.6rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .social-links {
+    margin-top: 0.5rem;
+  }
+  
+  .social-icon {
+    width: 30px;
+    height: 30px;
+    margin: 0 0.5rem;
+    vertical-align: middle;
+  }
+  
+  .social-icon:hover {
+    opacity: 1.2;
+  }
+
+
+
+/* About Me Container */
+.about-me-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    z-index: 10;
+}
+
+/* About Me Button */
+#about-me-btn {
+    width: 70px; /* Increased size */
+    height: 70px; /* Increased size */
+    border: none;
+    background: none;
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+/* About Me Button Zoom Effect */
+#about-me-btn:hover {
+    transform: scale(1.3);
+}
+
+/* About Me Image */
+#about-me-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.about-me-content-img {
+    width: 200px; /* Increased size */
+    height: 200px; /* Increased size */
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/* About Me Text Container */
+#about-me-text {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 30%;
+    background-color: rgba(206, 21, 21, 0.95);
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.25);
+    display: none;
+    transition: width 0.3s ease;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+/* Full Cover Container */
+#about-me-text.show {
+    display: block;
+    background-color: rgba(66, 155, 210, 0.95);
+    width: 15%;
+}
+
+/* Content Inside About Me */
+.about-me-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* About Me Text Enhancements */
+.about-me-content h2 {
+    margin: 10px 0 5px;
+    color: #161414;
+    font-size: 18px;
+}
+
+.about-me-content h4 {
+    margin: 0 0 10px;
+    color: #1b1818;
+    font-size: 14px;
+}
+
+.about-me-content p {
+    margin: 0;
+    color: #181414;
+    line-height: 1.5;
+    font-size: 12px;
+    text-align: justify;
+    padding: 10px;
+    border: 1px solid #c7d9df;
+    border-radius: 5px;
+    background: #b3b2c5;
+}
+
+/* About Me Content Image */
+.about-me-content-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 150%;
+    margin-bottom: 10px;
+}
+
+/* Show About Me Button */
+#show-about-me {
+    border: none;
+    background: #126dce;
+    color: rgb(5, 5, 14);
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#show-about-me:hover {
+    background: #2c70b8;
+}

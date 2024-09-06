@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic-Tac-Toe Game</title>
+    <link rel="stylesheet" href="TicTacToe.css" />
+  </head>
+  <body>
+    <div class="msg-container hide">
+      <p id="msg">Winner</p>
+      <button id="new-btn">New Game</button>
+    </div>
+    <main>
+      <h1>Tic Tac Toe</h1>
+<div class="about-me-container">
+  <button id="about-me-btn">
+    <img src="my.jpeg" alt="About Me" id="about-me-img" />
+  </button>
+  <button id="show-about-me">About Me</button>
+  <div id="about-me-text" class="hide">
+    <div class="about-me-content">
+      <img src="my.jpeg" alt="About Me" class="about-me-content-img" />
+      <h1>Hi! I am Harendra Singh</h1>
+      <h3>Software Engineer</h3>
+      <p>
+        I am a dedicated B.Tech student specializing in Information Technology-Business Informatics at IIIT Allahabad (2021-2025). With a robust background in web development, I have hands-on experience in HTML, CSS, JavaScript, and ReactJS, complemented by proficiency in MongoDB. My projects showcase my capabilities, including a dynamic Weather App, a comprehensive eCommerce platform, and an engaging Tic-Tac-Toe game.
+        I am driven by a passion for solving complex problems, demonstrated by my impressive 500+ day coding streak on LeetCode. My technical expertise extends to Cloud Computing and Project Management, evidenced by my certifications in these fields. I am eager to apply my skills to innovative challenges and contribute to impactful projects.
+      </p>
+    </div>
+  </div>
+</div>
+
+
+
+      <div class="setup-container">
+        
+        <div class="player-setup">
+          <input type="text" id="player1-name" placeholder="Player 1 Name" />
+          <input type="text" id="player2-name" placeholder="Player 2 Name" />
+        </div>
+        <div class="turn-setup">
+          <button id="player1-turn">Player 1</button>
+          <button id="player2-turn">Player 2</button>
+        </div>
+        <div class="turn-start">
+          <button id="start-game">Start Game</button>
+          <button id="reset-btn">Reset Game</button>
+        </div>
+      </div>
+      <div class="container hide">
+        <div class="game">
+          <button class="box" data-player="1"></button>
+          <button class="box" data-player="1"></button>
+          <button class="box" data-player="1"></button>
+          <button class="box" data-player="2"></button>
+          <button class="box" data-player="2"></button>
+          <button class="box" data-player="2"></button>
+          <button class="box" data-player="1"></button>
+          <button class="box" data-player="1"></button>
+          <button class="box" data-player="2"></button>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="footer-content">
+        <h2>Made by Harendra Singh</h2>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/harendra8587/" target="_blank">
+            <img src="linkedin.png" alt="LinkedIn" class="social-icon" />
+          </a>
+          <a href="https://www.instagram.com/harendra.singh_1/" target="_blank">
+            <img src="instagram.png" alt="Instagram" class="social-icon" />
+          </a>
+          <a href="https://github.com/Harendrasingh1" target="_blank">
+            <img src="github.png" alt="GitHub" class="social-icon" />
+          </a>
+        </div>
+      </div>
+    </footer>
+    
+    <script src="TicTacToe.js"></script>
+  </body>
+</html>
