@@ -1,84 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tic-Tac-Toe Game</title>
-    <link rel="stylesheet" href="TicTacToe.css" />
-  </head>
-  <body>
-    <div class="msg-container hide">
-      <p id="msg">Winner</p>
-      <button id="new-btn">New Game</button>
-    </div>
-    <main>
-      <h1>Tic Tac Toe</h1>
-<div class="about-me-container">
-  <button id="about-me-btn">
-    <img src="my.jpeg" alt="About Me" id="about-me-img" />
-  </button>
-  <button id="show-about-me">About Me</button>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tic-Tac-Toe Game</title>
+  <link rel="stylesheet" href="TicTacToe.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+
+<body>
+  <header>
+    <div class="logo">Tic Tac Toe</div>
+    <button id="about-me-btn">About Me</button>
+  </header>
+
   <div id="about-me-text" class="hide">
     <div class="about-me-content">
       <img src="my.jpeg" alt="About Me" class="about-me-content-img" />
       <h1>Hi! I am Harendra Singh</h1>
       <h3>Software Engineer</h3>
       <p>
-        I am a dedicated B.Tech student specializing in Information Technology-Business Informatics at IIIT Allahabad (2021-2025). With a robust background in web development, I have hands-on experience in HTML, CSS, JavaScript, and ReactJS, complemented by proficiency in MongoDB. My projects showcase my capabilities, including a dynamic Weather App, a comprehensive eCommerce platform, and an engaging Tic-Tac-Toe game.
-        I am driven by a passion for solving complex problems, demonstrated by my impressive 500+ day coding streak on LeetCode. My technical expertise extends to Cloud Computing and Project Management, evidenced by my certifications in these fields. I am eager to apply my skills to innovative challenges and contribute to impactful projects.
+        I am a Software Engineer at Urban Company and a Competitive Programmer. I specialize in building scalable web
+        applications using the MERN stack and have a strong foundation in Microservices and distributed systems and
+        algorithms.
       </p>
+      <ul class="highlights">
+        <li>Software Engineer at Urban Company</li>
+        <li>Expert on Codeforces (1617)</li>
+        <li>5 Star on CodeChef (2033)</li>
+        <li>B.Tech IIIT Allahabad (8.07 CGPA)</li>
+      </ul>
     </div>
   </div>
-</div>
+
+  <div class="msg-container hide">
+    <p id="msg">Winner</p>
+    <button id="new-btn">New Game</button>
+  </div>
+  <main>
 
 
 
-      <div class="setup-container">
-        
-        <div class="player-setup">
-          <input type="text" id="player1-name" placeholder="Player 1 Name" />
-          <input type="text" id="player2-name" placeholder="Player 2 Name" />
-        </div>
+
+    <div class="setup-container">
+
+      <div class="game-mode-setup" style="text-align: center; margin-bottom: 1rem;">
+        <h3 style="color: #4ca9da; margin-bottom: 0.5rem;">Game Mode</h3>
         <div class="turn-setup">
-          <button id="player1-turn">Player 1</button>
-          <button id="player2-turn">Player 2</button>
-        </div>
-        <div class="turn-start">
-          <button id="start-game">Start Game</button>
-          <button id="reset-btn">Reset Game</button>
+          <button id="mode-pvp" class="active">2 Players</button>
+          <button id="mode-pvc">vs Computer</button>
         </div>
       </div>
-      <div class="container hide">
-        <div class="game">
-          <button class="box" data-player="1"></button>
-          <button class="box" data-player="1"></button>
-          <button class="box" data-player="1"></button>
-          <button class="box" data-player="2"></button>
-          <button class="box" data-player="2"></button>
-          <button class="box" data-player="2"></button>
-          <button class="box" data-player="1"></button>
-          <button class="box" data-player="1"></button>
-          <button class="box" data-player="2"></button>
-        </div>
+
+      <div class="player-setup">
+        <input type="text" id="player1-name" placeholder="Player 1 Name" />
+        <input type="text" id="player2-name" placeholder="Player 2 Name" />
       </div>
-    </main>
-    <footer>
-      <div class="footer-content">
-        <h2>Made by Harendra Singh</h2>
-        <div class="social-links">
-          <a href="https://www.linkedin.com/in/harendra8587/" target="_blank">
-            <img src="linkedin.png" alt="LinkedIn" class="social-icon" />
-          </a>
-          <a href="https://www.instagram.com/harendra.singh_1/" target="_blank">
-            <img src="instagram.png" alt="Instagram" class="social-icon" />
-          </a>
-          <a href="https://github.com/Harendrasingh1" target="_blank">
-            <img src="github.png" alt="GitHub" class="social-icon" />
-          </a>
-        </div>
+      <div class="turn-setup">
+        <button id="player1-turn">Player 1</button>
+        <button id="player2-turn">Player 2</button>
       </div>
-    </footer>
-    
-    <script src="TicTacToe.js"></script>
-  </body>
+      <div class="turn-start">
+        <button id="start-game">Start Game</button>
+        <button id="reset-btn">Reset Game</button>
+      </div>
+    </div>
+    <div class="container hide">
+      <div class="game">
+        <button class="box" data-player="1"></button>
+        <button class="box" data-player="1"></button>
+        <button class="box" data-player="1"></button>
+        <button class="box" data-player="2"></button>
+        <button class="box" data-player="2"></button>
+        <button class="box" data-player="2"></button>
+        <button class="box" data-player="1"></button>
+        <button class="box" data-player="1"></button>
+        <button class="box" data-player="2"></button>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="footer-content">
+      <h2>Contact Me</h2>
+      <div class="contact-info">
+        <p><i class="fa-solid fa-envelope"></i> harendrajobs01@gmail.com</p>
+        <p><i class="fa-solid fa-phone"></i> +91-9068956883</p>
+        <p><i class="fa-solid fa-location-dot"></i> Gurugram, Haryana / Agra, Uttar Pradesh</p>
+      </div>
+      <div class="social-links">
+        <a href="https://www.instagram.com/harendra.singh_1/" target="_blank">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://github.com/Harendrasingh1" target="_blank">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://linkedin.com/in/harendra8587" target="_blank">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="https://leetcode.com/u/Thakurji01/" target="_blank">
+          <i class="fa-solid fa-code"></i>
+          <!-- Using code icon for LeetCode as specific icon might need more setup or simple fallback -->
+        </a>
+        <a href="mailto:harendrajobs01@gmail.com">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+      </div>
+      <p class="copyright">Made by Harendra Singh</p>
+    </div>
+  </footer>
+
+  <script src="TicTacToe.js"></script>
+</body>
+
 </html>
